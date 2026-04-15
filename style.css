@@ -10,6 +10,7 @@ body {
     margin: 0 auto;
     background: linear-gradient(to bottom, #f8fafc, #e6f4ea);
     color: #1e293b;
+    overflow-x: hidden;
 }
 
 /* Navbar Section CSS */
@@ -141,7 +142,8 @@ button:hover {
 }
 
 .card {
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     max-height: 500px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.8);
@@ -204,30 +206,47 @@ button:hover {
 
 @media (max-width: 768px) {
 
+    .navbar {
+        padding: 10px 15px;
+    }
+
     .menu {
         display: none;
     }
 
     .hero {
-        height: 60vh;
+        height: 70vh;
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
     }
 
     .card-container {
-        margin: 60px 0;
+        margin: 40px 0;
+        padding: 0 15px;   /* IMPORTANT */
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        align-items: center;
+        gap: 30px;
     }
 
     .card {
-        width: 80%;
+        width: 100%;
+        max-width: 350px;
     }
 
     .card h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .card p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
+
 }
